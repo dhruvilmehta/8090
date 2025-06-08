@@ -77,7 +77,7 @@ for ((i=0; i<num_cases; i++)); do
     if [ $((i % 100)) -eq 0 ]; then
         echo "Progress: $i/$num_cases cases processed..." >&2
     fi
-    
+    echo $i
     # Extract test case data from pre-loaded array
     IFS=':' read -r trip_duration miles_traveled receipts_amount expected <<< "${test_cases[i]}"
     
